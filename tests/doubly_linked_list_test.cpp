@@ -1,5 +1,9 @@
 #include <iostream>
 
+#include "tm/test_manager.hpp"
+
+#include "../include/list/DoublyLinkedList.hpp"
+
 #define YES 1
 #define NO 0
 

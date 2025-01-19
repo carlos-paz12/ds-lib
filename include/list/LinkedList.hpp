@@ -11,9 +11,33 @@ namespace ds
     public:
         using value_type = T;
         using size_type = std::size_t;
+        using difference_type = std::ptrdiff_t;
+        using reference = value_type &;
+        using const_reference = const value_type &;
+        using pointer = value_type *;
+        using const_pointer = const value_type *;
+        /// iterator
+        /// const_iterator
         using node = SinglyNode<value_type>;
 
-        LinkedList() : m_head(nullptr), m_size(0) {}
+        explicit LinkedList(size_type count = size_type(), const_reference val = value_type()) : m_size(count)
+        {
+            if (count == 0)
+            {
+                m_head = nullptr;
+                return;
+            }
+
+            m_head = new node(val);
+            node *cur{m_head};
+
+            for (size_type i{1}; i < count; ++i)
+            {
+                node *new_node{new node(val)};
+                cur->m_next = new_node;
+                cur = new_node;
+            }
+        }
 
         ~LinkedList()
         {
