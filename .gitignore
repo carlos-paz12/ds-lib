@@ -1,0 +1,41 @@
+# Ignorar arquivos de build
+/build/
+/cmake-build-debug/
+/cmake-build-release/
+/CMakeFiles/
+/CMakeCache.txt
+/Debian/
+/Makefile
+
+# Ignorar arquivos do sistema operacional (ex: Windows, macOS)
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos temporários de editores de texto
+*.swp
+*.swo
+
+# Ignorar arquivos de compilação específicos do C++
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.out
+
+# Ignorar arquivos gerados por IDEs
+/.vscode/
+/.idea/
+/*.user
+/*.userosscache
+/*.suo
+/*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# Ignorar diretórios específicos de dependências e bibliotecas
+/extern/
+/libs/
+
+# Ignorar arquivos de backup de edição
+*~ 
